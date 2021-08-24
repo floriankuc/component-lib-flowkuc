@@ -15,6 +15,8 @@
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-react": "^7.14.5",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
     "@storybook/addon-actions": "^6.3.7",
     "@storybook/addon-essentials": "^6.3.7",
@@ -25,6 +27,9 @@
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "babel-loader": "^8.2.2",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "pretty-quick": "^3.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "rollup": "^2.56.3",
@@ -62,5 +67,8 @@
       "eslint --fix"
     ]
   },
-  "prettier": "prettier-config-flowkuc"
+  "prettier": "prettier-config-flowkuc",
+  "commitlint": {
+    "extends": "@commitlint/config-conventional"
+  }
 }
