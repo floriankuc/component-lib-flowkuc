@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const Requirements = () => {
-  return <div>Requirement</div>;
+export const Requirements = (): React.ReactElement => {
+	return <div>Requirement</div>;
 };
