@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "build": "rollup -c"
+    "build": "rimraf dist && rollup -c"
   },
   "author": "",
   "license": "ISC",
@@ -17,7 +17,9 @@
     "@babel/preset-react": "^7.14.5",
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@rollup/plugin-commonjs": "^20.0.0",
     "@rollup/plugin-node-resolve": "^13.0.4",
+    "@rollup/plugin-typescript": "^8.2.5",
     "@storybook/addon-actions": "^6.3.7",
     "@storybook/addon-essentials": "^6.3.7",
     "@storybook/addon-links": "^6.3.7",
@@ -32,11 +34,16 @@
     "pretty-quick": "^3.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-jss": "^10.7.1",
+    "rimraf": "^3.0.2",
     "rollup": "^2.56.3",
+    "rollup-plugin-auto-external": "^2.0.0",
     "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-dts": "^3.0.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.1.2"
   },
   "peerDependencies": {
@@ -47,7 +54,7 @@
     "@typescript-eslint/eslint-plugin": "4.20.0",
     "@typescript-eslint/parser": "4.20.0",
     "eslint": "7.23.0",
-    "eslint-config-flowkuc": "0.0.2",
+    "eslint-config-flowkuc": "^0.0.3",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-compat": "3.13.0",
     "eslint-plugin-react": "7.24.0",
@@ -57,18 +64,14 @@
     "prettier-eslint": "13.0.0"
   },
   "eslintConfig": {
-    "extends": [
-      "flowkuc"
-    ]
+    "extends": ["flowkuc"]
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "pretty-quick --staged",
-      "eslint --fix"
-    ]
+    "*.{js,jsx,ts,tsx}": ["pretty-quick --staged", "eslint --fix"]
   },
   "prettier": "prettier-config-flowkuc",
   "commitlint": {
     "extends": "@commitlint/config-conventional"
-  }
+  },
+  "types": "dist/index.d.ts"
 }
