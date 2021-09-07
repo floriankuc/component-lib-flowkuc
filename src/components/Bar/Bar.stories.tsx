@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button } from '.';
+import { Bar } from '.';
 
 export const Basic = (): React.ReactElement => {
-	return <Button />;
+	return <Bar />;
 };
 
 export default {
-	title: 'Button',
-	component: Button,
+	title: 'Bar',
+	component: Bar,
 };

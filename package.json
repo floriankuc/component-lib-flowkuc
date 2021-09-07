@@ -59,6 +59,7 @@
     "react-dom": "^17.0.2"
   },
   "dependencies": {
+    "@types/react-jss": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "4.20.0",
     "@typescript-eslint/parser": "4.20.0",
     "eslint": "7.23.0",
@@ -67,6 +68,7 @@
     "eslint-plugin-compat": "3.13.0",
     "eslint-plugin-react": "7.24.0",
     "eslint-plugin-react-hooks": "4.2.0",
+    "jss-plugin-global": "^10.7.1",
     "prettier": "2.1.1",
     "prettier-config-flowkuc": "0.0.2",
     "prettier-eslint": "13.0.0"

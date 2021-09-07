@@ -2847,6 +2847,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-jss@^10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@types/react-jss/-/react-jss-10.0.0.tgz#ecfa9ba68dffb7a89f0c059f104623ee90c96413"
+  integrity sha512-xy3Y0RVEubCpaLIvyu8rMu5CDGHSv3TnbP7Ob++r85WlLRx13B0l1vGnifIzT8rDiOb2yMX2MZWFZH9l4l3p/A==
+  dependencies:
+    react-jss "*"
+
 "@types/react-syntax-highlighter@11.0.5":
   version "11.0.5"
   resolved "https://registry.yarnpkg.com/@types/react-syntax-highlighter/-/react-syntax-highlighter-11.0.5.tgz#0d546261b4021e1f9d85b50401c0a42acb106087"
@@ -8273,7 +8280,7 @@ jss-plugin-extend@10.7.1:
     jss "10.7.1"
     tiny-warning "^1.0.2"
 
-jss-plugin-global@10.7.1:
+jss-plugin-global@10.7.1, jss-plugin-global@^10.7.1:
   version "10.7.1"
   resolved "https://registry.yarnpkg.com/jss-plugin-global/-/jss-plugin-global-10.7.1.tgz#9725c46d662aac2e596a0a8741944c060e2b90a1"
   integrity sha512-FbxCnu44IkK/bw8X3CwZKmcAnJqjAb9LujlAc/aP0bMSdVa3/MugKQRyeQSu00uGL44feJJDoeXXiHOakBr/Zw==
@@ -10344,7 +10351,7 @@ react-is@^17.0.1, react-is@^17.0.2:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-react-jss@^10.7.1:
+react-jss@*, react-jss@^10.7.1:
   version "10.7.1"
   resolved "https://registry.yarnpkg.com/react-jss/-/react-jss-10.7.1.tgz#67c146ca1c27ddb017f1a00194a3dd3e219cefbc"
   integrity sha512-Zkq53nRyM8COT9OE0Jtirwxu76dkytcA3qXrjGxak6Z5yol+i4LSAZzWSoI59h0oTaMTiKxr6ZMT3BEpPxauBA==
