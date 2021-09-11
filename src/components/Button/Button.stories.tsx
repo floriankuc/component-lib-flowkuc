@@ -1,12 +1,12 @@
 import React from 'react';
-import { storiesOf } from '@storybook/react';
 import { Button } from '.';
+import { GlobalStyles } from '../../theme/GlobalStyles';
 
 export const Basic = (): React.ReactElement => {
 	return <Button />;
 };
 
 export default {
-	title: 'Basics',
+	title: 'Button',
 	component: Button,
 };

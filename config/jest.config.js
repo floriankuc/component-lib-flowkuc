@@ -7,9 +7,10 @@ module.exports = {
 	transform: {
 		'.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform',
 		'^.+\\.svg$': 'jest-svg-transformer',
+		'^.+\\.js?$': 'ts-jest',
 	},
 	moduleNameMapper: {
-		'^.+\\.(css|less)$': '<rootDir>/config/stub.js',
+		'^.+\\.(css|less|woff|woff2)$': '<rootDir>/config/stub.js',
 	},
 	globals: {
 		'ts-jest': {
