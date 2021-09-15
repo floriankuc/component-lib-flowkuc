@@ -7,6 +7,9 @@ declare module 'styled-components' {
 		button: {
 			color: string;
 		};
+		mixins: {
+			link: FlattenSimpleInterpolation;
+		};
 	}
 
 	export function createGlobalStyle(strings: TemplateStringsArray, ...interpolations: SimpleInterpolation[]): React.ComponentClass;

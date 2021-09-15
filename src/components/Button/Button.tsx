@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { ThemeWrapper } from '../ThemeWrapper';
 import { media } from '../../theme/media';
-export interface ButtonProps {
+export interface IButton {
 	title?: string;
 }
 
-export const Button = (props: ButtonProps): React.ReactElement => {
+export const Button = (props: IButton): React.ReactElement => {
 	return (
 		<ThemeWrapper>
 			<StyledButton>

@@ -16,6 +16,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
+	  font-family: Montserrat, Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;

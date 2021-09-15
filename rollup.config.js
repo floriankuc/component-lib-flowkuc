@@ -6,6 +6,8 @@ import commonjs from '@rollup/plugin-commonjs';
 import dts from 'rollup-plugin-dts';
 import typescript from '@rollup/plugin-typescript';
 import del from 'rollup-plugin-delete';
+import svgr from '@svgr/rollup';
+import url from 'rollup-plugin-url';
 
 export default [
 	{
@@ -29,10 +31,18 @@ export default [
 				exclude: 'node_modules/**',
 				presets: ['@babel/preset-react'],
 			}),
+			url({
+				// by default, rollup-plugin-url will not handle font files
+				include: ['**/*.woff', '**/*.woff2'],
+				// setting infinite limit will ensure that the files
+				// are always bundled with the code, not copied to /dist
+				limit: Infinity,
+			}),
 			resolve(),
 			commonjs(),
 			external(),
 			terser(),
+			svgr(),
 		],
 	},
 	{
