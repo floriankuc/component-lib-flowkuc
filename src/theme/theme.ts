@@ -1,5 +1,6 @@
 import { DefaultTheme } from 'styled-components';
 import { colors } from './colors';
+import { mixins } from './mixins';
 
 export const theme: DefaultTheme = {
 	primaryColor: '#0f0',
@@ -7,6 +8,7 @@ export const theme: DefaultTheme = {
 	button: {
 		color: colors.specialColor,
 	},
+	mixins,
 };
 
 export const darkTheme: DefaultTheme = {
@@ -15,4 +17,5 @@ export const darkTheme: DefaultTheme = {
 	button: {
 		color: colors.specialColor,
 	},
+	mixins,
 };

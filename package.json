@@ -51,6 +51,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-url": "^3.0.1",
     "ts-jest": "^26.5.0",
     "typescript": "^4.1.2"
   },
@@ -59,6 +60,8 @@
     "react-dom": "^17.0.2"
   },
   "dependencies": {
+    "@svgr/rollup": "^5.5.0",
+    "@svgr/webpack": "^5.5.0",
     "@types/react-jss": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "4.20.0",
     "@typescript-eslint/parser": "4.20.0",
@@ -75,7 +78,10 @@
     "styled-components": "^5.3.1"
   },
   "eslintConfig": {
-    "extends": ["flowkuc"]
+    "extends": ["flowkuc"],
+    "rules": {
+      "quotes": "off"
+    }
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": ["pretty-quick --staged", "eslint --fix"]
