@@ -29,3 +29,5 @@ export const mockActionItems: ActionItem[] = [
 		actionFn: (item: ActionItem): void => action(item.id)(),
 	},
 ];
+
+export const [actionItem] = mockActionItems;
