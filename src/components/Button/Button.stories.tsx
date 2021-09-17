@@ -7,6 +7,6 @@ export const Basic = (): React.ReactElement => {
 };
 
 export default {
-	title: 'Button',
+	title: 'Components/Button',
 	component: Button,
 };

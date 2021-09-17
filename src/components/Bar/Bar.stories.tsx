@@ -13,7 +13,7 @@ export const Sticky = (): React.ReactElement => <Bar sticky actionItems={actionI
 Sticky.decorators = [ScrollingDecorator];
 
 export default {
-	title: 'Bar',
+	title: 'Components/Bar',
 	component: Bar,
 	decorators: [ThemeDecorator],
 } as Meta;

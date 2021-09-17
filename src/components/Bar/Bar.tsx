@@ -10,6 +10,8 @@ export interface IBar {
 	align?: Alignments;
 }
 
+export type IStyledContainer = Pick<IBar, 'align' | 'sticky'>;
+
 export type ActionFn = (actionItem: ActionItem) => void;
 
 export type DisplayNode = {
@@ -47,20 +49,20 @@ export const Bar = ({ className, align, sticky, actionItems }: IBar): ReactEleme
 	);
 };
 
-const StyledBarContainer = styled.div`
+const StyledBarContainer = styled.div<IStyledContainer>`
 	padding: 8px;
 	display: flex;
 	align-items: center;
 	width: 100%;
-	justify-content: ${(props: IBar): string => alignments[props.align || 'right']};
-	position: ${(props: IBar): string => (props.sticky ? `sticky` : `static`)};
+	justify-content: ${({ align }): string => alignments[align || 'right']};
+	position: ${({ sticky }): string => (sticky ? `sticky` : `static`)};
 	overflow: hidden;
 	min-height: 40px;
 	max-height: 68px;
 	height: 68px;
-	top: ${(props: IBar): string => (props.sticky ? `0` : ``)};
+	top: ${({ sticky }): string => (sticky ? `0` : ``)};
+	background-color: #999;
 	${media.sm} {
 		height: 40px;
 	}
-	background-color: #999;
 `;
