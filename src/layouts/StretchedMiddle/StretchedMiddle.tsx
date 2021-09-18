@@ -9,7 +9,7 @@ export interface IStretchedMiddle {
 }
 
 export interface IStyledSide {
-	width: number;
+	width: IStretchedMiddle['sideWidth'];
 }
 
 export const StretchedMiddle = ({ left, middle, right, sideWidth }: IStretchedMiddle): ReactElement => (
@@ -31,28 +31,3 @@ const StyledMain = styled.main`
 const StyledSide = styled.aside<IStyledSide>`
 	width: ${({ width }): string => `${width}px`};
 `;
-
-/* width: ${({ width }): string => `${width}px`}; */
-
-// .container {
-//   display: flex;
-// }
-
-// .item {
-//   height: 100px;
-//   width: 100px; /* A fixed width as the default */
-// }
-
-// .item-center {
-//   flex-grow: 1; /* Set the middle element to grow and stretch */
-// }
-
-// .item + .item {
-//   margin-left: 2%;
-// }
-
-//layoutWrapper: flex, column
-//header
-//layoutmain { flex 1, overflowY scroll
-//footer
-///layoutwrapper
